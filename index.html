@@ -14,6 +14,7 @@ h1{font-size:clamp(1.6rem,5vw,2.4rem)}p{line-height:1.8;color:#cbd5e1}button{pad
 <h1>مرحبًا بك في تجربة GitHub 👋</h1>
 <p>صفحة تجريبية لاختبار الكود والفروع والإصدارات.</p>
 <button id="welcome" type="button">جرّب الزر التفاعلي</button>
+<button id="reset" type="button">تصفير العداد</button>
 <p id="status" role="status" aria-live="polite">اضغط الزر لعرض رسالة الترحيب.</p>
 </main>
 <script>
@@ -21,4 +22,5 @@ const button=document.querySelector('#welcome');
 const status=document.querySelector('#status');
 let clicks=0;
 button.addEventListener('click',()=>{clicks+=1;status.textContent='أهلًا بك! الزر يعمل بنجاح. عدد النقرات: '+clicks;});
+document.querySelector('#reset').addEventListener('click',()=>{clicks=0;status.textContent='تم تصفير العداد. عدد النقرات: 0';});
 </script></body></html>
